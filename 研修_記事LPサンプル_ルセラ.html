@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【研修用】ルセラ モイストセラム｜記事LPサンプル</title>
+<style>
+:root{
+  --ink:#241F26;
+  --paper:#FCF9F6;
+  --sand:#F0E5DC;
+  --rose:#A8455F;
+  --rose-soft:#D98BA0;
+  --leaf:#6E7F63;
+  --gray:#7C7379;
+  --line:#E4D9D0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Hiragino Sans","Yu Gothic","Noto Sans JP",sans-serif;
+  font-size:16px;
+  line-height:1.9;
+  letter-spacing:.02em;
+}
+.wrap{max-width:560px;margin:0 auto;background:#fff;box-shadow:0 0 40px rgba(36,31,38,.06)}
+.pad{padding:0 22px}
+.mincho{font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
+
+/* 記事ヘッダー */
+.masthead{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 22px;border-bottom:1px solid var(--line);
+  background:var(--paper);
+}
+.masthead .logo{font-size:15px;font-weight:700;letter-spacing:.14em}
+.masthead .pr{
+  font-size:11px;color:var(--gray);border:1px solid var(--line);
+  border-radius:2px;padding:2px 8px;letter-spacing:.1em;
+}
+
+/* FV */
+.fv{padding:30px 22px 26px;background:linear-gradient(180deg,var(--sand) 0%,#fff 100%)}
+.fv .eyebrow{
+  display:inline-block;font-size:12px;letter-spacing:.16em;color:var(--rose);
+  border-bottom:1px solid var(--rose-soft);padding-bottom:3px;margin-bottom:16px;
+}
+.fv h1{
+  font-size:29px;line-height:1.55;font-weight:700;letter-spacing:.01em;
+}
+.fv h1 .hl{
+  background:linear-gradient(transparent 62%,#F6D9A8 62%);
+  padding:0 2px;
+}
+.fv .sub{margin-top:14px;font-size:14px;color:var(--gray)}
+.fv figure{margin-top:20px;border-radius:6px;overflow:hidden}
+.fv svg{display:block;width:100%;height:auto}
+
+/* セクション見出し */
+h2{
+  font-size:22px;line-height:1.6;font-weight:700;margin-bottom:16px;
+}
+h2 .num{
+  display:block;font-size:11px;letter-spacing:.2em;color:var(--rose);
+  font-weight:600;margin-bottom:6px;
+}
+section{padding:38px 0}
+section + section{border-top:1px solid var(--line)}
+p + p{margin-top:14px}
+.lead{font-size:17px;line-height:1.95}
+
+/* 悩みリスト */
+.worries{margin-top:20px;border:1px solid var(--line);border-radius:4px;background:var(--paper)}
+.worries li{
+  list-style:none;padding:14px 18px 14px 44px;position:relative;font-size:15px;
+}
+.worries li + li{border-top:1px dashed var(--line)}
+.worries li::before{
+  content:"";position:absolute;left:18px;top:19px;width:14px;height:14px;
+  border:2px solid var(--rose-soft);border-radius:50%;
+}
+
+/* 転換ブロック */
+.turn{
+  margin-top:22px;padding:20px;border-left:3px solid var(--rose);
+  background:var(--paper);font-size:16px;
+}
+.turn strong{color:var(--rose)}
+
+/* 成分カード */
+.ing{display:grid;gap:12px;margin-top:20px}
+.ing-item{
+  display:flex;gap:14px;align-items:flex-start;
+  padding:16px;border:1px solid var(--line);border-radius:4px;
+}
+.ing-item .mark{
+  flex:0 0 42px;height:42px;border-radius:50%;
+  background:var(--sand);display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;color:var(--leaf);
+}
+.ing-item h3{font-size:16px;margin-bottom:4px}
+.ing-item p{font-size:13.5px;color:var(--gray);line-height:1.8}
+
+/* 体験談 */
+.voice{
+  margin-top:18px;padding:18px;border-radius:4px;background:var(--paper);
+  border:1px solid var(--line);
+}
+.voice + .voice{margin-top:12px}
+.voice .who{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.voice .avatar{width:38px;height:38px;border-radius:50%;background:var(--sand)}
+.voice .name{font-size:13px;font-weight:700}
+.voice .attr{font-size:12px;color:var(--gray)}
+.voice p{font-size:14.5px}
+.stars{color:#E5A44B;font-size:13px;letter-spacing:.1em}
+
+/* アンケート */
+.quiz{margin-top:18px}
+.quiz .q{font-size:16px;font-weight:700;margin-bottom:12px}
+.choice{
+  display:block;width:100%;text-align:left;cursor:pointer;
+  padding:14px 16px;margin-bottom:10px;font-size:15px;font-family:inherit;
+  background:#fff;border:1.5px solid var(--line);border-radius:4px;
+  transition:background .15s,border-color .15s;
+}
+.choice:hover{border-color:var(--rose-soft)}
+.choice[aria-pressed="true"]{background:var(--sand);border-color:var(--rose)}
+.quiz .result{
+  display:none;margin-top:6px;padding:14px 16px;border-radius:4px;
+  background:var(--paper);border:1px solid var(--line);font-size:14.5px;
+}
+.quiz .result.show{display:block}
+
+/* 比較表 */
+table{width:100%;border-collapse:collapse;margin-top:18px;font-size:14px}
+th,td{border:1px solid var(--line);padding:11px 10px;text-align:center}
+thead th{background:var(--sand);font-size:13px}
+tbody th{text-align:left;font-weight:400;background:var(--paper)}
+.yes{color:var(--rose);font-weight:700}
+.no{color:var(--gray)}
+
+/* CTA */
+.cta{padding:34px 22px;background:linear-gradient(180deg,#fff 0%,var(--sand) 100%);text-align:center}
+.cta .price{font-size:14px;color:var(--gray);margin-bottom:6px}
+.cta .price b{font-size:30px;color:var(--rose);font-family:"Hiragino Mincho ProN",serif}
+.btn{
+  position:relative;display:inline-block;width:100%;max-width:400px;
+  padding:19px 20px;margin-top:14px;border-radius:999px;overflow:hidden;
+  background:linear-gradient(135deg,#B94F69 0%,#8E3A52 100%);
+  color:#fff;font-size:18px;font-weight:700;text-decoration:none;
+  box-shadow:0 6px 0 #6E2B3E;
+}
+.btn::after{
+  content:"";position:absolute;top:-60%;left:-40%;width:28%;height:220%;
+  background:rgba(255,255,255,.35);transform:rotate(22deg);
+  animation:shine 3s ease-in-out infinite;
+}
+@keyframes shine{
+  0%{left:-40%} 55%{left:130%} 100%{left:130%}
+}
+.cta .note{margin-top:12px;font-size:12px;color:var(--gray)}
+
+/* FAQ */
+.faq dt{font-weight:700;font-size:15px;margin-top:16px}
+.faq dt::before{content:"Q. ";color:var(--rose)}
+.faq dd{font-size:14.5px;color:var(--gray);margin-top:5px}
+.faq dd::before{content:"A. ";color:var(--ink);font-weight:700}
+
+/* フッター */
+footer{padding:26px 22px 34px;background:var(--paper);border-top:1px solid var(--line)}
+footer p{font-size:11.5px;color:var(--gray);line-height:1.8}
+
+.training-note{
+  max-width:560px;margin:0 auto;padding:12px 22px;
+  background:#241F26;color:#fff;font-size:12px;line-height:1.7;
+}
+.training-note b{color:#F6D9A8}
+
+@media (prefers-reduced-motion:reduce){
+  .btn::after{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="training-note">
+  <b>研修用サンプル</b>　架空の商品・架空の体験談です。実在の商品とは関係ありません。このページを見ながら、Squad beyondで同じものを作ってみてください。
+</div>
+
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="logo">KIREI LAB</div>
+    <div class="pr">PR</div>
+  </div>
+
+  <!-- ファーストビュー -->
+  <div class="fv">
+    <span class="eyebrow">40代からのスキンケア</span>
+    <h1 class="mincho">夕方になると、<br><span class="hl">ファンデが粉をふく</span>。<br>原因は乾燥じゃなかった。</h1>
+    <p class="sub">同じ化粧品を使い続けているのに、去年より肌がゆらぐ。その理由を、皮膚の研究をしている人に聞いてきました。</p>
+    <figure>
+      <svg viewBox="0 0 560 320" role="img" aria-label="朝と夕方の肌の水分量の変化を表したイラスト">
+        <rect width="560" height="320" fill="#F0E5DC"/>
+        <circle cx="150" cy="130" r="72" fill="#fff" opacity=".85"/>
+        <circle cx="150" cy="130" r="52" fill="#D98BA0" opacity=".35"/>
+        <circle cx="410" cy="130" r="72" fill="#fff" opacity=".85"/>
+        <circle cx="410" cy="130" r="30" fill="#D98BA0" opacity=".22"/>
+        <text x="150" y="140" text-anchor="middle" font-size="26" fill="#A8455F" font-family="serif">朝</text>
+        <text x="410" y="140" text-anchor="middle" font-size="26" fill="#7C7379" font-family="serif">夕方</text>
+        <path d="M245 130 L315 130" stroke="#A8455F" stroke-width="2"/>
+        <path d="M305 122 L317 130 L305 138 Z" fill="#A8455F"/>
+        <text x="280" y="248" text-anchor="middle" font-size="18" fill="#241F26" font-family="sans-serif">肌の水分量は1日で大きく変わる</text>
+        <text x="280" y="278" text-anchor="middle" font-size="13" fill="#7C7379" font-family="sans-serif">※イメージ図です</text>
+      </svg>
+    </figure>
+  </div>
+
+  <!-- 悩み -->
+  <section class="pad">
+    <h2><span class="num">はじめに</span>こんなこと、ありませんか</h2>
+    <p class="lead">30代までは気にならなかったのに、40代に入ってから急に肌の調子が読めなくなった。そんな声をよく聞きます。</p>
+    <ul class="worries">
+      <li>朝はきれいに塗れたのに、夕方には小じわに入り込んでいる</li>
+      <li>化粧水がすぐ乾く。何回重ねても足りない気がする</li>
+      <li>季節の変わり目に、決まって頬がざらつく</li>
+      <li>高い美容液に変えてみたけれど、違いが分からなかった</li>
+    </ul>
+    <div class="turn">
+      ひとつでも当てはまるなら、原因は<strong>「水分が足りないこと」ではないかもしれません</strong>。
+    </div>
+  </section>
+
+  <!-- 理由 -->
+  <section class="pad">
+    <h2><span class="num">わかったこと</span>足りないのは水分ではなく、<br>抱えこむ力でした</h2>
+    <p>肌の表面には、水分をつなぎとめておくための層があります。年齢とともにこの層をつくる成分が減っていくため、同じだけ化粧水を入れても、以前のようには留まってくれません。</p>
+    <p>つまり、注ぐ量を増やすのではなく、<strong>受け皿のほうを整える</strong>という考え方です。</p>
+    <figure style="margin-top:18px">
+      <svg viewBox="0 0 560 240" role="img" aria-label="水分を抱えこむ層のイメージ図">
+        <rect width="560" height="240" fill="#FCF9F6"/>
+        <rect x="40" y="60" width="220" height="120" rx="6" fill="#fff" stroke="#E4D9D0"/>
+        <rect x="300" y="60" width="220" height="120" rx="6" fill="#fff" stroke="#E4D9D0"/>
+        <g fill="#D98BA0" opacity=".5">
+          <circle cx="80" cy="150" r="9"/><circle cx="110" cy="158" r="7"/><circle cx="145" cy="152" r="8"/>
+        </g>
+        <g fill="#A8455F" opacity=".5">
+          <circle cx="340" cy="100" r="9"/><circle cx="375" cy="118" r="8"/><circle cx="415" cy="98" r="9"/>
+          <circle cx="450" cy="120" r="7"/><circle cx="390" cy="150" r="8"/><circle cx="345" cy="152" r="7"/>
+        </g>
+        <text x="150" y="205" text-anchor="middle" font-size="15" fill="#7C7379" font-family="sans-serif">受け皿が浅いと、沈んで終わる</text>
+        <text x="410" y="205" text-anchor="middle" font-size="15" fill="#A8455F" font-family="sans-serif">層が整うと、留まりつづける</text>
+      </svg>
+    </figure>
+  </section>
+
+  <!-- 商品 -->
+  <section class="pad">
+    <h2><span class="num">解決策</span>そこで生まれたのが<br>「ルセラ モイストセラム」です</h2>
+    <p>受け皿を整えることに絞って設計した美容液です。配合しているのは、次の3つ。</p>
+    <div class="ing">
+      <div class="ing-item">
+        <div class="mark">01</div>
+        <div>
+          <h3>セラミドEX</h3>
+          <p>水分をつなぎとめる層のもとになる成分。肌にもともとある形に近づけて配合しました。</p>
+        </div>
+      </div>
+      <div class="ing-item">
+        <div class="mark">02</div>
+        <div>
+          <h3>発酵ハトムギエキス</h3>
+          <p>ざらつきが気になる季節の変わり目に。なめらかな手ざわりに整えます。</p>
+        </div>
+      </div>
+      <div class="ing-item">
+        <div class="mark">03</div>
+        <div>
+          <h3>3種のヒアルロン酸</h3>
+          <p>大きさの違う3種類を組み合わせ、表面と内側の両方にアプローチします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 体験談 -->
+  <section class="pad">
+    <h2><span class="num">使った人の声</span>使いはじめて変わったこと</h2>
+    <div class="voice">
+      <div class="who">
+        <div class="avatar"></div>
+        <div>
+          <div class="name">R.K さん（46歳・会社員）</div>
+          <div class="attr">使用歴 3ヶ月</div>
+        </div>
+      </div>
+      <div class="stars">★★★★★</div>
+      <p>夕方の鏡が怖くなくなりました。塗った直後のもちもち感より、時間が経ってからの差のほうが大きいです。</p>
+    </div>
+    <div class="voice">
+      <div class="who">
+        <div class="avatar"></div>
+        <div>
+          <div class="name">M.T さん（43歳・自営業）</div>
+          <div class="attr">使用歴 2ヶ月</div>
+        </div>
+      </div>
+      <div class="stars">★★★★☆</div>
+      <p>とろみがあるのにベタつかないのが良かったです。朝に使っても化粧が崩れにくくなりました。</p>
+    </div>
+    <div class="voice">
+      <div class="who">
+        <div class="avatar"></div>
+        <div>
+          <div class="name">Y.S さん（51歳・パート）</div>
+          <div class="attr">使用歴 6ヶ月</div>
+        </div>
+      </div>
+      <div class="stars">★★★★★</div>
+      <p>季節の変わり目にいつも荒れていた頬が、今年は落ち着いています。もう手放せません。</p>
+    </div>
+    <p style="font-size:12px;color:var(--gray);margin-top:14px">※個人の感想であり、効果を保証するものではありません。</p>
+  </section>
+
+  <!-- アンケート -->
+  <section class="pad">
+    <h2><span class="num">かんたん診断</span>あなたの肌はどのタイプ？</h2>
+    <div class="quiz">
+      <p class="q">夕方、いちばん気になるのはどこですか？</p>
+      <button class="choice" aria-pressed="false" data-answer="小じわに入り込むタイプの方は、水分を抱えこむ層が弱っている可能性があります。夜のケアを厚みではなく回数で見直すのがおすすめです。">目もと・口もとの小じわ</button>
+      <button class="choice" aria-pressed="false" data-answer="ざらつきが出るタイプの方は、季節の影響を受けやすい状態です。まずは手ざわりを整えることから始めてみてください。">頬のざらつき</button>
+      <button class="choice" aria-pressed="false" data-answer="テカりが気になる方も、内側は乾いていることがあります。量を減らすより、留まる設計に変えるほうが近道です。">Tゾーンのテカり</button>
+      <div class="result" id="quizResult"></div>
+    </div>
+  </section>
+
+  <!-- 比較表 -->
+  <section class="pad">
+    <h2><span class="num">比べてみました</span>これまでの美容液との違い</h2>
+    <table>
+      <thead>
+        <tr><th></th><th>ルセラ</th><th>一般的な<br>美容液</th></tr>
+      </thead>
+      <tbody>
+        <tr><th>水分を抱える成分</th><td class="yes">3種配合</td><td class="no">1種のみ</td></tr>
+        <tr><th>夕方の持続</th><td class="yes">◎</td><td class="no">△</td></tr>
+        <tr><th>朝も使える</th><td class="yes">◎</td><td class="no">○</td></tr>
+        <tr><th>香料・着色料</th><td class="yes">不使用</td><td class="no">配合あり</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:var(--gray);margin-top:12px">※自社調べによる比較です。</p>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta" id="offer">
+    <p class="price">初回限定　<b>1,980</b> 円（税込・送料無料）</p>
+    <p style="font-size:13px;color:var(--gray)">2回目以降も 20% オフで続けられます</p>
+    <a class="btn" href="#offer">お得に試してみる</a>
+    <p class="note">いつでも休止・解約できます</p>
+  </div>
+
+  <!-- FAQ -->
+  <section class="pad faq">
+    <h2><span class="num">よくある質問</span>買う前に気になること</h2>
+    <dl>
+      <dt>敏感肌でも使えますか？</dt>
+      <dd>香料・着色料は使っていません。心配な場合は、目立たないところで試してから使ってください。</dd>
+      <dt>いつ使えばいいですか？</dt>
+      <dd>化粧水のあと、乳液の前に使ってください。朝と夜の1日2回がおすすめです。</dd>
+      <dt>どのくらいで変化を感じますか？</dt>
+      <dd>肌が生まれ変わる周期があるため、まずは1ヶ月続けてみてください。</dd>
+    </dl>
+  </section>
+
+  <footer>
+    <p>これは研修用に作成した架空のページです。商品名・会社名・体験談・数値はすべて架空のもので、実在のものとは関係ありません。</p>
+    <p style="margin-top:8px">KIREI LAB ／ 研修用サンプル</p>
+  </footer>
+</div>
+
+
+
+<script>
+document.querySelectorAll('.choice').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.choice').forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+    btn.setAttribute('aria-pressed','true');
+    var box = document.getElementById('quizResult');
+    box.textContent = btn.dataset.answer;
+    box.classList.add('show');
+  });
+});
+</script>
+</body>
+</html>
